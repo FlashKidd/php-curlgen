@@ -1,13 +1,17 @@
 # PHP cURL Code Generator
 
-This single-page tool helps generate PHP cURL snippets for HTTP requests. Open `curl-gen.php` in any modern web browser and fill out the form. The generated code can then be downloaded as a PHP file.
+Generate ready-to-use PHP cURL scripts directly from your browser. Simply open `curl-gen.php`, fill in the fields and options, then click **Generate Code** to view and download the snippet.
 
-Features include:
+## Features
 
-- Support for GET and POST requests
-- Optional request headers with dynamic header fields
-- Cookie jar support
-- Response header capture and redirect URL capture
-- JSON parsing and substring extraction utilities
+- Supports GET and POST requests
+- Dynamic request headers with add/remove controls
+- Optional cookie jar handling
+- Extract substring from the response
+- Capture redirect URL
+- Capture specific response headers
+- Parse JSON values using dot notation
+- Responsive layout using Orbitron and Roboto Mono fonts
+- Download the generated code as a standalone PHP file
 
-The page runs entirely in the browser – no server side dependencies are required.
+This page runs entirely in the browser &ndash; no server side dependencies are required.
