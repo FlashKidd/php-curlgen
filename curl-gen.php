@@ -227,6 +227,13 @@
             capHdrSec.style.display = useCaptHeaders.checked ? 'block' : 'none';
         });
 
+        // Initial visibility
+        postCtl.style.display = methodEl.value === 'POST' ? 'block' : 'none';
+        hdrSec.style.display = useHdr.checked ? 'block' : 'none';
+        extractSec.style.display = useExtract.checked ? 'block' : 'none';
+        jsonSec.style.display = useJSON.checked ? 'block' : 'none';
+        capHdrSec.style.display = useCaptHeaders.checked ? 'block' : 'none';
+
         // Generate code
         form.addEventListener('submit', e => {
             e.preventDefault();
@@ -275,12 +282,12 @@
                 code += "$body        = substr($response, $header_size);\n";
                 code += "$lines       = explode("\r\n", $header_str);\n";
                 code += "$headers_arr = [];\n";
-                code += ``foreach ($lines as $ln) {
-    if (strpos($ln, ':') !== false) {
-        list($k, $v) = explode(': ', $ln, 2);
-        $headers_arr[$k] = $v;
-    }
-}\n``;
+                code += `foreach ($lines as $ln) {\n`;
+                code += `    if (strpos($ln, ':') !== false) {\n`;
+                code += `        list($k, $v) = explode(': ', $ln, 2);\n`;
+                code += `        $headers_arr[$k] = $v;\n`;
+                code += `    }\n`;
+                code += `}\n`;
                 const names = document.getElementById('hdrNames').value.split(',').map(s => s.trim());
                 names.forEach(n => {
                     code += `$${n.replace(/[^A-Za-z0-9_]/g, '_')} = \$headers_arr['${n}'] ?? null;\n`;
