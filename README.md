@@ -1,6 +1,6 @@
 # PHP cURL Code Generator
 
-Generate ready-to-use PHP cURL scripts directly from your browser. Simply open `curl-gen.php`, fill in the fields and options, then click **Generate Code** to view and download the snippet.
+Generate ready-to-use PHP cURL scripts directly from your browser. Simply open `index.html`, fill in the fields and options, then click **Generate Code** to view and download the snippet.
 
 ## Features
 
