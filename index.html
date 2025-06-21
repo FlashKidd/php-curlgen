@@ -267,7 +267,7 @@
         let code = "<?php\n";
         code += "$ch = curl_init();\n";
         code += `curl_setopt($ch, CURLOPT_URL, '${document.getElementById('url').value}');\n`;
-        code += 'curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);\n';
+        code += "curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);\n";
         code += "curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\n";
         code += "curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);\n";
         if (useCookie.checked) {
